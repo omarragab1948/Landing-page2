@@ -67,6 +67,9 @@ section {
   margin: 15px;
   font-weight: bold;
   font-size: 20px;
+  display: flex;
+  justify-content: end;
+  list-style: none;
 }
 
 
@@ -75,6 +78,14 @@ a{
   color: #000;
   margin: 15px;
 
+}
+a:hover{
+  color: #fff
+}
+
+.navDiv:hover{
+  background-color: #000;
+  color: #fff;
 }
 @media (max-width : 376px) {
   a {

@@ -1,14 +1,21 @@
+/*add sections in nav dynamically*/
 let ulNav = document.getElementById("navbar__list");
-let url="#section"
+
 for(let i = 0; i < (document.querySelectorAll("section").length); i++){
     document.write(`<a href="#section${i+1}">Section ${i+1}</a>`)
+    document.write("<div class = navDiv></div>")
 }
 for(let i = 0; i < document.links.length; i++){
     document.querySelectorAll("a")[i].className = `section${i+1}`
 }
 for(let i = 0; i < document.links.length; i++){
-    ulNav.appendChild(document.querySelectorAll("a")[i])
+    (document.querySelectorAll(".navDiv")[i]).appendChild(document.querySelectorAll("a")[i])
+    ulNav.appendChild(document.querySelectorAll(".navDiv")[i])
 }
+
+
+
+/*add active class*/
 
 window.onscroll = function (){
     if (window.scrollY <= 620 && window.scrollY >= 615){
@@ -38,5 +45,4 @@ window.onscroll = function (){
            document.getElementById("section5").classList.toggle("your-active-class");
     }
 }
-
 
